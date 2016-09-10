@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'video_uploads/new'
+
+  get 'video_uploads/create'
+
   get 'sessions/create'
 
   get 'sessions/destroy'
