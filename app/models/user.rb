@@ -10,3 +10,4 @@ class User < ApplicationRecord
 		end
 	end
 end
+# http://127.0.0.1:3000/auth/google_oauth2/callback

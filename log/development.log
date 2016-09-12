@@ -11,3 +11,1279 @@ Migrating to CreateVideos (20160908005637)
   [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-09-08 00:58:11 UTC], ["updated_at", 2016-09-08 00:58:11 UTC]]
   [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for ::1 at 2016-09-10 16:12:10 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (9.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.0.1) lib/active_record/migration.rb:572:in `check_pending!'
+activerecord (5.0.0.1) lib/active_record/migration.rb:548:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.2ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (131.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20160909184143)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "token" varchar, "uid" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_uid" ON "users" ("uid")[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160909184143"]]
+  [1m[35m (36.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_uid' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_uid' AND type='index'
+[0m
+Started GET "/" for ::1 at 2016-09-10 16:13:28 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VideosController#index as HTML
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/iNjaro/Sites/Rails_Apps/yt_videos/app/models/video.rb:18: syntax error, unexpected keyword_rescue, expecting keyword_end
+	rescue(YT::Errors::NoItems)
+	      ^):
+  
+app/models/video.rb:18: syntax error, unexpected keyword_rescue, expecting keyword_end
+app/controllers/videos_controller.rb:4:in `index'
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (12.6ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (100.2ms)
+Started GET "/" for ::1 at 2016-09-10 16:16:51 -0500
+Processing by VideosController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/iNjaro/Sites/Rails_Apps/yt_videos/app/models/video.rb:18: syntax error, unexpected keyword_rescue, expecting keyword_end
+	rescue(YT::Errors::NoItems)
+	      ^
+/Users/iNjaro/Sites/Rails_Apps/yt_videos/app/models/video.rb:28: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/video.rb:18: syntax error, unexpected keyword_rescue, expecting keyword_end
+app/models/video.rb:28: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/videos_controller.rb:4:in `index'
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.2ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (88.0ms)
+Started GET "/" for ::1 at 2016-09-10 16:17:12 -0500
+Processing by VideosController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/iNjaro/Sites/Rails_Apps/yt_videos/app/models/video.rb:18: syntax error, unexpected keyword_rescue, expecting keyword_end
+	rescue(YT::Errors::NoItems)
+	      ^):
+  
+app/models/video.rb:18: syntax error, unexpected keyword_rescue, expecting keyword_end
+app/controllers/videos_controller.rb:4:in `index'
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.6ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (92.8ms)
+Started GET "/" for ::1 at 2016-09-10 16:17:50 -0500
+Processing by VideosController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/iNjaro/Sites/Rails_Apps/yt_videos/app/models/video.rb:18: syntax error, unexpected keyword_rescue, expecting keyword_end
+	rescue(YT::Errors::NoItems)
+	      ^
+/Users/iNjaro/Sites/Rails_Apps/yt_videos/app/models/video.rb:28: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/models/video.rb:18: syntax error, unexpected keyword_rescue, expecting keyword_end
+app/models/video.rb:28: syntax error, unexpected keyword_end, expecting end-of-input
+app/controllers/videos_controller.rb:4:in `index'
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.2ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (89.4ms)
+Started GET "/" for ::1 at 2016-09-10 16:19:31 -0500
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 0.7ms)
+
+
+  
+SyntaxError (/Users/iNjaro/Sites/Rails_Apps/yt_videos/app/views/layouts/application.html.erb:21: syntax error, unexpected ')'
+...Video", new_video_upload_path,);@output_buffer.safe_append='...
+...                               ^
+/Users/iNjaro/Sites/Rails_Apps/yt_videos/app/views/layouts/application.html.erb:22: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;	  			 end 
+         	  			    ^
+/Users/iNjaro/Sites/Rails_Apps/yt_videos/app/views/layouts/application.html.erb:46: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/iNjaro/Sites/Rails_Apps/yt_videos/app/views/layouts/application.html.erb:48: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/layouts/application.html.erb:21: syntax error, unexpected ')'
+app/views/layouts/application.html.erb:22: syntax error, unexpected keyword_end, expecting ')'
+app/views/layouts/application.html.erb:46: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/layouts/application.html.erb:48: syntax error, unexpected keyword_end, expecting ')'
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (13.1ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (97.4ms)
+Started GET "/" for ::1 at 2016-09-10 16:20:12 -0500
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 343ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /Users/iNjaro/Sites/Rails_Apps/yt_videos/app/assets/config
+  /Users/iNjaro/Sites/Rails_Apps/yt_videos/app/assets/images
+  /Users/iNjaro/Sites/Rails_Apps/yt_videos/app/assets/javascripts
+  /Users/iNjaro/Sites/Rails_Apps/yt_videos/app/assets/stylesheets
+  /Users/iNjaro/Sites/Rails_Apps/yt_videos/vendor/assets/javascripts
+  /Users/iNjaro/Sites/Rails_Apps/yt_videos/vendor/assets/stylesheets
+  /usr/local/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/fonts
+  /usr/local/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/javascripts
+  /usr/local/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets
+  /usr/local/lib/ruby/gems/2.2.0/gems/jquery-rails-4.2.1/vendor/assets/javascripts
+  /usr/local/lib/ruby/gems/2.2.0/gems/coffee-rails-4.2.1/lib/assets/javascripts
+  /usr/local/lib/ruby/gems/2.2.0/gems/actioncable-5.0.0.1/lib/assets/compiled
+  /usr/local/lib/ruby/gems/2.2.0/gems/turbolinks-source-5.0.0/lib/assets/javascripts
+  /usr/local/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets):
+    4:     <title>YtVideos</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.scss:18
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__3344132179012021393_70287050631700'
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (31.1ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.3ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (136.2ms)
+Started GET "/" for ::1 at 2016-09-10 16:22:29 -0500
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /Users/iNjaro/Sites/Rails_Apps/yt_videos/app/assets/config
+  /Users/iNjaro/Sites/Rails_Apps/yt_videos/app/assets/images
+  /Users/iNjaro/Sites/Rails_Apps/yt_videos/app/assets/javascripts
+  /Users/iNjaro/Sites/Rails_Apps/yt_videos/app/assets/stylesheets
+  /Users/iNjaro/Sites/Rails_Apps/yt_videos/vendor/assets/javascripts
+  /Users/iNjaro/Sites/Rails_Apps/yt_videos/vendor/assets/stylesheets
+  /usr/local/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/fonts
+  /usr/local/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/javascripts
+  /usr/local/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets
+  /usr/local/lib/ruby/gems/2.2.0/gems/jquery-rails-4.2.1/vendor/assets/javascripts
+  /usr/local/lib/ruby/gems/2.2.0/gems/coffee-rails-4.2.1/lib/assets/javascripts
+  /usr/local/lib/ruby/gems/2.2.0/gems/actioncable-5.0.0.1/lib/assets/compiled
+  /usr/local/lib/ruby/gems/2.2.0/gems/turbolinks-source-5.0.0/lib/assets/javascripts
+  /usr/local/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets):
+    4:     <title>YtVideos</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.scss:1
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__3344132179012021393_70287035752220'
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (18.1ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (102.8ms)
+Started GET "/" for ::1 at 2016-09-10 16:27:33 -0500
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /Users/iNjaro/Sites/Rails_Apps/yt_videos/app/assets/config
+  /Users/iNjaro/Sites/Rails_Apps/yt_videos/app/assets/images
+  /Users/iNjaro/Sites/Rails_Apps/yt_videos/app/assets/javascripts
+  /Users/iNjaro/Sites/Rails_Apps/yt_videos/app/assets/stylesheets
+  /Users/iNjaro/Sites/Rails_Apps/yt_videos/vendor/assets/javascripts
+  /Users/iNjaro/Sites/Rails_Apps/yt_videos/vendor/assets/stylesheets
+  /usr/local/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/fonts
+  /usr/local/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/javascripts
+  /usr/local/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets
+  /usr/local/lib/ruby/gems/2.2.0/gems/jquery-rails-4.2.1/vendor/assets/javascripts
+  /usr/local/lib/ruby/gems/2.2.0/gems/coffee-rails-4.2.1/lib/assets/javascripts
+  /usr/local/lib/ruby/gems/2.2.0/gems/actioncable-5.0.0.1/lib/assets/compiled
+  /usr/local/lib/ruby/gems/2.2.0/gems/turbolinks-source-5.0.0/lib/assets/javascripts
+  /usr/local/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets):
+    4:     <title>YtVideos</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.css.scss:1
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__3344132179012021393_70287075696240'
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (14.8ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.8ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (101.1ms)
+Started GET "/" for ::1 at 2016-09-10 16:27:38 -0500
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /Users/iNjaro/Sites/Rails_Apps/yt_videos/app/assets/config
+  /Users/iNjaro/Sites/Rails_Apps/yt_videos/app/assets/images
+  /Users/iNjaro/Sites/Rails_Apps/yt_videos/app/assets/javascripts
+  /Users/iNjaro/Sites/Rails_Apps/yt_videos/app/assets/stylesheets
+  /Users/iNjaro/Sites/Rails_Apps/yt_videos/vendor/assets/javascripts
+  /Users/iNjaro/Sites/Rails_Apps/yt_videos/vendor/assets/stylesheets
+  /usr/local/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/fonts
+  /usr/local/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/javascripts
+  /usr/local/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets
+  /usr/local/lib/ruby/gems/2.2.0/gems/jquery-rails-4.2.1/vendor/assets/javascripts
+  /usr/local/lib/ruby/gems/2.2.0/gems/coffee-rails-4.2.1/lib/assets/javascripts
+  /usr/local/lib/ruby/gems/2.2.0/gems/actioncable-5.0.0.1/lib/assets/compiled
+  /usr/local/lib/ruby/gems/2.2.0/gems/turbolinks-source-5.0.0/lib/assets/javascripts
+  /usr/local/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets):
+    4:     <title>YtVideos</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.css.scss:1
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__3344132179012021393_70287059115900'
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (16.3ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.1ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (102.3ms)
+Started GET "/" for ::1 at 2016-09-10 16:27:52 -0500
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /Users/iNjaro/Sites/Rails_Apps/yt_videos/app/assets/config
+  /Users/iNjaro/Sites/Rails_Apps/yt_videos/app/assets/images
+  /Users/iNjaro/Sites/Rails_Apps/yt_videos/app/assets/javascripts
+  /Users/iNjaro/Sites/Rails_Apps/yt_videos/app/assets/stylesheets
+  /Users/iNjaro/Sites/Rails_Apps/yt_videos/vendor/assets/javascripts
+  /Users/iNjaro/Sites/Rails_Apps/yt_videos/vendor/assets/stylesheets
+  /usr/local/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/fonts
+  /usr/local/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/javascripts
+  /usr/local/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets
+  /usr/local/lib/ruby/gems/2.2.0/gems/jquery-rails-4.2.1/vendor/assets/javascripts
+  /usr/local/lib/ruby/gems/2.2.0/gems/coffee-rails-4.2.1/lib/assets/javascripts
+  /usr/local/lib/ruby/gems/2.2.0/gems/actioncable-5.0.0.1/lib/assets/compiled
+  /usr/local/lib/ruby/gems/2.2.0/gems/turbolinks-source-5.0.0/lib/assets/javascripts
+  /usr/local/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets):
+    4:     <title>YtVideos</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.css.scss:1
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__3344132179012021393_70287042355760'
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (16.1ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (99.8ms)
+Started GET "/" for ::1 at 2016-09-10 16:31:12 -0500
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 9016ms (Views: 9013.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-09-10 16:35:45 -0500
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 70ms (Views: 65.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-09-10 16:39:43 -0500
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 69ms (Views: 65.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-10 16:39:49 -0500
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.8ms)
+  Rendered videos/new.html.erb within layouts/application (86.5ms)
+Completed 200 OK in 193ms (Views: 150.6ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-10 16:40:47 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SagksJOwscKuZRfOkRLrTyslPZgl0pevcQKU02OwT7yYeU7CiJouUq7eKCfZ+1gksPWjA7L/+tP2QjLYW4czQQ==", "video"=>{"link"=>"https://www.youtube.com/watch?v=si2stxyxQ_k"}, "commit"=>"Create Video"}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.7ms)
+
+
+  
+NameError (uninitialized constant Video::YT):
+  
+app/models/video.rb:19:in `rescue in block in <class:Video>'
+app/models/video.rb:9:in `block in <class:Video>'
+app/controllers/videos_controller.rb:13:in `create'
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.9ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (101.2ms)
+Started GET "/videos/new" for ::1 at 2016-09-10 16:41:01 -0500
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.6ms)
+  Rendered videos/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 58ms (Views: 55.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2016-09-10 16:41:08 -0500
+Started GET "/auth/google_oauth2" for ::1 at 2016-09-10 16:41:08 -0500
+Started GET "/videos/new" for ::1 at 2016-09-10 16:51:06 -0500
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.5ms)
+  Rendered videos/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 63ms (Views: 58.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2016-09-10 16:51:10 -0500
+Started GET "/auth/google_oauth2" for ::1 at 2016-09-10 16:51:10 -0500
+Started GET "/videos/new" for ::1 at 2016-09-10 16:52:57 -0500
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.8ms)
+  Rendered videos/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 59ms (Views: 56.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2016-09-10 16:53:02 -0500
+Started GET "/auth/google_oauth2" for ::1 at 2016-09-10 16:53:02 -0500
+Started GET "/" for ::1 at 2016-09-10 16:58:34 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 989ms (Views: 913.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2016-09-10 16:58:39 -0500
+Started GET "/auth/google_oauth2" for ::1 at 2016-09-10 16:58:39 -0500
+Started GET "/auth/google_oauth2" for ::1 at 2016-09-10 18:07:26 -0500
+Started GET "/auth/google_oauth2" for ::1 at 2016-09-10 18:07:26 -0500
+Started GET "/auth/google_oauth2" for ::1 at 2016-09-11 16:01:40 -0500
+Started GET "/auth/google_oauth2" for ::1 at 2016-09-11 16:01:40 -0500
+Started GET "/auth/google_oauth2" for ::1 at 2016-09-11 16:01:48 -0500
+Started GET "/auth/google_oauth2" for ::1 at 2016-09-11 16:01:48 -0500
+Started GET "/" for ::1 at 2016-09-11 18:02:20 -0500
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 604ms (Views: 524.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2016-09-11 18:02:24 -0500
+Started GET "/auth/google_oauth2" for ::1 at 2016-09-11 18:02:24 -0500
+Started GET "/" for ::1 at 2016-09-11 18:05:27 -0500
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 97ms (Views: 88.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-09-11 18:05:30 -0500
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 59ms (Views: 56.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-11 18:05:38 -0500
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (1.2ms)
+  Rendered videos/new.html.erb within layouts/application (123.8ms)
+Completed 200 OK in 193ms (Views: 173.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2016-09-11 18:05:40 -0500
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 66ms (Views: 63.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-11 18:05:42 -0500
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (1.1ms)
+  Rendered videos/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 77ms (Views: 71.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-09-11 18:05:44 -0500
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 73ms (Views: 69.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2016-09-11 18:05:47 -0500
+Started GET "/auth/google_oauth2" for ::1 at 2016-09-11 18:05:47 -0500
+Started GET "/" for ::1 at 2016-09-11 18:18:05 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 758ms (Views: 689.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2016-09-11 18:18:10 -0500
+Started GET "/auth/google_oauth2" for ::1 at 2016-09-11 18:18:10 -0500
+Started GET "/auth/google_oauth2/callback?state=3f6853b200dc9bc98a41fb72c5b38a9ac8c73052107ec5c4&code=4/HPUaaiiQUEZc0T_jqV8G7XL3w_L_KPAoB-tsXZBIxYk" for ::1 at 2016-09-11 18:20:20 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"state"=>"3f6853b200dc9bc98a41fb72c5b38a9ac8c73052107ec5c4", "code"=>"4/HPUaaiiQUEZc0T_jqV8G7XL3w_L_KPAoB-tsXZBIxYk", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "108260153303008961615"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (28.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "token", "uid", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Kilima Glenn"], ["token", "ya29.Ci9bA7YL1vqvhk_TB2X9J-wcxAfkTqhhCYcnrrlWMTk_p8kcxWiVuZXNo97yjet0NQ"], ["uid", "108260153303008961615"], ["created_at", 2016-09-11 23:20:21 UTC], ["updated_at", 2016-09-11 23:20:21 UTC]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 132ms (ActiveRecord: 32.2ms)
+
+
+Started GET "/" for ::1 at 2016-09-11 18:20:21 -0500
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos" ORDER BY created_at Desc[0m
+Completed 500 Internal Server Error in 295ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_video_upload_path' for #<#<Class:0x007fe7adca3608>:0x007fe7b21aa5d0>):
+    18: 	  			<li> <%= link_to "Videos", root_path %></li>
+    19: 	  			<li> <%= link_to "Add Video", new_video_path %></li>
+    20: 	  			<% if current_user %>
+    21: 	  				<li> <%= link_to "Upload Video", new_video_upload_path%></li>
+    22: 	  			<% end %>
+    23: 	  		</ul>
+    24: 	  		<ul class="nav navbar-nav pull-right">
+  
+app/views/layouts/application.html.erb:21:in `_app_views_layouts_application_html_erb___189015997835782107_70316551051060'
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.7ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (105.0ms)
+Started GET "/" for ::1 at 2016-09-11 18:22:52 -0500
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (4.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT "videos".* FROM "videos" ORDER BY created_at Desc[0m
+Completed 500 Internal Server Error in 168ms (ActiveRecord: 2.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_video_upload_path' for #<#<Class:0x007fe7ac60b058>:0x007fe7ac609e38>):
+    18: 	  			<li> <%= link_to "Videos", root_path %></li>
+    19: 	  			<li> <%= link_to "Add Video", new_video_path %></li>
+    20: 	  			<% if current_user %>
+    21: 	  				<li> <%= link_to "Upload Video", new_video_upload_path%></li>
+    22: 	  			<% end %>
+    23: 	  		</ul>
+    24: 	  		<ul class="nav navbar-nav pull-right">
+  
+app/views/layouts/application.html.erb:21:in `_app_views_layouts_application_html_erb___189015997835782107_70316550508220'
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.0ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (98.7ms)
+Started GET "/" for ::1 at 2016-09-11 18:22:58 -0500
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVideo Load (0.6ms)[0m  [1m[34mSELECT "videos".* FROM "videos" ORDER BY created_at Desc[0m
+Completed 500 Internal Server Error in 135ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_video_upload_path' for #<#<Class:0x007fe7ac60b058>:0x007fe7ab9ae238>):
+    18: 	  			<li> <%= link_to "Videos", root_path %></li>
+    19: 	  			<li> <%= link_to "Add Video", new_video_path %></li>
+    20: 	  			<% if current_user %>
+    21: 	  				<li> <%= link_to "Upload Video", new_video_upload_path%></li>
+    22: 	  			<% end %>
+    23: 	  		</ul>
+    24: 	  		<ul class="nav navbar-nav pull-right">
+  
+app/views/layouts/application.html.erb:21:in `_app_views_layouts_application_html_erb___189015997835782107_70316504896720'
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.2ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (105.5ms)
+Started GET "/" for ::1 at 2016-09-11 18:23:25 -0500
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (3.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 114ms (Views: 67.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-11 18:32:19 -0500
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.9ms)
+  Rendered videos/new.html.erb within layouts/application (82.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 312ms (Views: 284.6ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-11 18:33:23 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZUv3duhk6X85FdyPkJcZSiX+TYNpWrTvTwZ09Fop0+G0mp0E80527zmu42bYfqohvi7TGP532ZPIRtL/Yh6vHA==", "video"=>{"link"=>"https://www.youtube.com/watch?v=B6M1wIDCegU"}, "commit"=>"Create Video"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.2ms)
+
+
+  
+NameError (uninitialized constant Video::YT):
+  
+app/models/video.rb:19:in `rescue in block in <class:Video>'
+app/models/video.rb:9:in `block in <class:Video>'
+app/controllers/videos_controller.rb:13:in `create'
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.8ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (100.7ms)
+Started POST "/videos" for ::1 at 2016-09-11 18:36:06 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZUv3duhk6X85FdyPkJcZSiX+TYNpWrTvTwZ09Fop0+G0mp0E80527zmu42bYfqohvi7TGP532ZPIRtL/Yh6vHA==", "video"=>{"link"=>"https://www.youtube.com/watch?v=B6M1wIDCegU"}, "commit"=>"Create Video"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.0ms)
+
+
+  
+NameError (uninitialized constant Video::YT):
+  
+app/models/video.rb:10:in `block in <class:Video>'
+app/controllers/videos_controller.rb:13:in `create'
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.8ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (98.4ms)
+Started POST "/videos" for ::1 at 2016-09-11 18:48:21 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZUv3duhk6X85FdyPkJcZSiX+TYNpWrTvTwZ09Fop0+G0mp0E80527zmu42bYfqohvi7TGP532ZPIRtL/Yh6vHA==", "video"=>{"link"=>"https://www.youtube.com/watch?v=B6M1wIDCegU"}, "commit"=>"Create Video"}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `attr_accessible' for #<Class:0x007fe7adfdb7d0>):
+  
+app/models/video.rb:3:in `<class:Video>'
+app/models/video.rb:1:in `<top (required)>'
+app/controllers/videos_controller.rb:12:in `create'
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.7ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (99.5ms)
+Started POST "/videos" for ::1 at 2016-09-11 18:50:03 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZUv3duhk6X85FdyPkJcZSiX+TYNpWrTvTwZ09Fop0+G0mp0E80527zmu42bYfqohvi7TGP532ZPIRtL/Yh6vHA==", "video"=>{"link"=>"https://www.youtube.com/watch?v=B6M1wIDCegU"}, "commit"=>"Create Video"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 2.0ms)
+
+
+  
+NameError (uninitialized constant Video::YT):
+  
+app/models/video.rb:21:in `rescue in block in <class:Video>'
+app/models/video.rb:11:in `block in <class:Video>'
+app/controllers/videos_controller.rb:13:in `create'
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.7ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (93.1ms)
+Started POST "/videos" for ::1 at 2016-09-11 18:53:21 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZUv3duhk6X85FdyPkJcZSiX+TYNpWrTvTwZ09Fop0+G0mp0E80527zmu42bYfqohvi7TGP532ZPIRtL/Yh6vHA==", "video"=>{"link"=>"https://www.youtube.com/watch?v=B6M1wIDCegU"}, "commit"=>"Create Video"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 1.3ms)
+
+
+  
+NameError (uninitialized constant Video::YT):
+  
+app/models/video.rb:21:in `rescue in block in <class:Video>'
+app/models/video.rb:11:in `block in <class:Video>'
+app/controllers/videos_controller.rb:13:in `create'
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.5ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (101.2ms)
+Started GET "/" for ::1 at 2016-09-11 18:53:26 -0500
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (5.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 256ms (Views: 235.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-11 18:53:31 -0500
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.9ms)
+  Rendered videos/new.html.erb within layouts/application (103.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 223ms (Views: 184.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-11 18:53:41 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yh6Y95m6b286JvbwQBjIuHyL3sHamk3dN4pyhEixSTgbz/KFgpDw/zqdyRkI8XvT51tAWk23IKGwytSPcIY1xQ==", "video"=>{"link"=>"https://www.youtube.com/watch?v=si2stxyxQ_k"}, "commit"=>"Create Video"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+
+
+  
+NameError (uninitialized constant Video::YT):
+  
+app/models/video.rb:21:in `rescue in block in <class:Video>'
+app/models/video.rb:11:in `block in <class:Video>'
+app/controllers/videos_controller.rb:13:in `create'
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.9ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (99.6ms)
+Started GET "/" for ::1 at 2016-09-11 18:57:13 -0500
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (3.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 67ms (Views: 59.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-11 18:57:16 -0500
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.6ms)
+  Rendered videos/new.html.erb within layouts/application (5.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 78ms (Views: 53.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-11 18:57:19 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fgueYLgMqPWFL7SWIf32odzNmkJUAxTMW/PGLr2qxAiv2vQSoyY3ZYWUi39pFEXKRx0E2cMuebDcs2AlhZ249Q==", "video"=>{"link"=>"https://www.youtube.com/watch?v=B6M1wIDCegU"}, "commit"=>"Create Video"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+
+  
+NameError (uninitialized constant Video::YT):
+  
+app/models/video.rb:21:in `rescue in block in <class:Video>'
+app/models/video.rb:11:in `block in <class:Video>'
+app/controllers/videos_controller.rb:13:in `create'
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.6ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (101.5ms)
+Started POST "/videos" for ::1 at 2016-09-11 19:01:55 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fgueYLgMqPWFL7SWIf32odzNmkJUAxTMW/PGLr2qxAiv2vQSoyY3ZYWUi39pFEXKRx0E2cMuebDcs2AlhZ249Q==", "video"=>{"link"=>"https://www.youtube.com/watch?v=B6M1wIDCegU"}, "commit"=>"Create Video"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 1.6ms)
+
+
+  
+NameError (uninitialized constant Video::YT):
+  
+app/models/video.rb:21:in `rescue in block in <class:Video>'
+app/models/video.rb:11:in `block in <class:Video>'
+app/controllers/videos_controller.rb:13:in `create'
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.2ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (97.6ms)
+Started GET "/" for ::1 at 2016-09-11 19:02:22 -0500
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 59ms (Views: 54.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-11 19:02:27 -0500
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (1.0ms)
+  Rendered videos/new.html.erb within layouts/application (6.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 60ms (Views: 56.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-11 19:03:17 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vMsNOX1SJCja9PsHgg4ERN6FmwzqLfCiCHf8gNO2LGxtGmdLZni7uNpPxO7K57cvRVUFl30And6PN1qL64FQkQ==", "video"=>{"link"=>"https://www.youtube.com/watch?v=si2stxyxQ_k"}, "commit"=>"Create Video"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.5ms)
+
+
+  
+NameError (uninitialized constant Video::YT):
+  
+app/models/video.rb:21:in `rescue in block in <class:Video>'
+app/models/video.rb:11:in `block in <class:Video>'
+app/controllers/videos_controller.rb:13:in `create'
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (16.3ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (103.0ms)
+Started GET "/" for ::1 at 2016-09-11 19:03:51 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (18.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 752ms (Views: 721.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-11 19:03:55 -0500
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.6ms)
+  Rendered videos/new.html.erb within layouts/application (266.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 314ms (Views: 301.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-11 19:03:59 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AArqGP6fYHeF2WsINkmS+SfvuP/vGjDdwJTw8u6ndUjR24Bq5bX/54ViVOF+oCGSvD8mZHg3XaFH1Fb51pAJtQ==", "video"=>{"link"=>"https://www.youtube.com/watch?v=B6M1wIDCegU"}, "commit"=>"Create Video"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.3ms)
+
+
+  
+NameError (uninitialized constant Video::YT):
+  
+app/models/video.rb:21:in `rescue in block in <class:Video>'
+app/models/video.rb:11:in `block in <class:Video>'
+app/controllers/videos_controller.rb:13:in `create'
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (21.3ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.0ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (112.9ms)
+Started POST "/__web_console/repl_sessions/7711aae91c537ab7961d09c963a9c4a5/trace" for ::1 at 2016-09-11 19:04:06 -0500
+Started GET "/" for ::1 at 2016-09-11 19:05:24 -0500
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (4.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 75ms (Views: 65.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-11 19:05:27 -0500
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.9ms)
+  Rendered videos/new.html.erb within layouts/application (6.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 74ms (Views: 50.5ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-11 19:05:39 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vORbXyy/5Hstv+iU+Wrnke0xk+rcOQV96jAnqKDiOhVtNTEtN5V76y0E132xg1T6duENcUsUaAFtcIGjmNVG6A==", "video"=>{"link"=>"https://www.youtube.com/watch?v=si2stxyxQ_k"}, "commit"=>"Create Video"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms)
+
+
+  
+NameError (uninitialized constant Video::YT):
+  
+app/models/video.rb:21:in `rescue in block in <class:Video>'
+app/models/video.rb:11:in `block in <class:Video>'
+app/controllers/videos_controller.rb:13:in `create'
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.5ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (91.9ms)
+Started POST "/videos" for ::1 at 2016-09-11 19:11:43 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vORbXyy/5Hstv+iU+Wrnke0xk+rcOQV96jAnqKDiOhVtNTEtN5V76y0E132xg1T6duENcUsUaAFtcIGjmNVG6A==", "video"=>{"link"=>"https://www.youtube.com/watch?v=si2stxyxQ_k"}, "commit"=>"Create Video"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 1.7ms)
+
+
+  
+NameError (uninitialized constant Video::YT):
+  
+app/models/video.rb:21:in `rescue in block in <class:Video>'
+app/models/video.rb:11:in `block in <class:Video>'
+app/controllers/videos_controller.rb:13:in `create'
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.3ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.1ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (94.7ms)
+Started GET "/" for ::1 at 2016-09-11 19:11:49 -0500
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 123ms (Views: 98.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-11 19:11:53 -0500
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.6ms)
+  Rendered videos/new.html.erb within layouts/application (20.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 89ms (Views: 75.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-11 19:12:25 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l7WE7JZjnpjBEvAuLFxIFoxdwf992ugI4Ich+WZg//ZGZO6ejUkBCMGpz8dktft9F41fZOr3hXRnx4fyXleDCw==", "video"=>{"link"=>"https://www.youtube.com/watch?v=si2stxyxQ_k"}, "commit"=>"Create Video"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 3.2ms)
+
+
+  
+NameError (uninitialized constant Video::YT):
+  
+app/models/video.rb:21:in `rescue in block in <class:Video>'
+app/models/video.rb:11:in `block in <class:Video>'
+app/controllers/videos_controller.rb:13:in `create'
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (12.7ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (91.0ms)
+Started GET "/videos/new" for ::1 at 2016-09-11 19:13:41 -0500
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.5ms)
+  Rendered videos/new.html.erb within layouts/application (5.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 67ms (Views: 63.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-11 19:13:48 -0500
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.6ms)
+  Rendered videos/new.html.erb within layouts/application (5.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 58ms (Views: 54.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-11 19:13:54 -0500
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.9ms)
+  Rendered videos/new.html.erb within layouts/application (5.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 50ms (Views: 47.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2016-09-11 19:13:55 -0500
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 75ms (Views: 71.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-11 19:13:56 -0500
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.6ms)
+  Rendered videos/new.html.erb within layouts/application (5.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 53ms (Views: 50.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/video_uploads/new" for ::1 at 2016-09-11 19:14:01 -0500
+Processing by VideoUploadsController#new as HTML
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/iNjaro/Sites/Rails_Apps/yt_videos/app/models/video_upload.rb:6: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+	validates :file, presence :true
+	                           ^
+/Users/iNjaro/Sites/Rails_Apps/yt_videos/app/models/video_upload.rb:7: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+	validates :title, presence :true
+	                            ^
+/Users/iNjaro/Sites/Rails_Apps/yt_videos/app/models/video_upload.rb:16: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/models/video_upload.rb:6: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+app/models/video_upload.rb:7: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+app/models/video_upload.rb:16: syntax error, unexpected keyword_end, expecting end-of-input
+app/controllers/video_uploads_controller.rb:3:in `new'
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (12.9ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (100.0ms)
+Started GET "/videos/new" for ::1 at 2016-09-11 19:14:09 -0500
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.9ms)
+  Rendered videos/new.html.erb within layouts/application (7.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 59ms (Views: 55.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-11 19:18:52 -0500
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.5ms)
+  Rendered videos/new.html.erb within layouts/application (4.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 48ms (Views: 44.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-11 19:19:01 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Q15Atl+nqDcD+sKK51qekrlWJocJlz9TzY+5HXy/ZTqt9GPNzzP2z+weTxFp86hQHntGhNYImhpQBpwvz48UJQ==", "video"=>{"link"=>"https://www.youtube.com/watch?v=si2stxyxQ_k"}, "commit"=>"Create Video"}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.4ms)
+
+
+  
+NameError (uninitialized constant Video::YT):
+  
+app/models/video.rb:21:in `rescue in block in <class:Video>'
+app/models/video.rb:11:in `block in <class:Video>'
+app/controllers/videos_controller.rb:13:in `create'
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.5ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (100.3ms)
+Started GET "/videos/new" for ::1 at 2016-09-11 19:22:04 -0500
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.7ms)
+  Rendered videos/new.html.erb within layouts/application (7.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 76ms (Views: 56.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-11 19:22:09 -0500
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.8ms)
+  Rendered videos/new.html.erb within layouts/application (5.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 59ms (Views: 46.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2016-09-11 19:22:16 -0500
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 46ms (Views: 42.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-11 19:22:18 -0500
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.7ms)
+  Rendered videos/new.html.erb within layouts/application (4.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 58ms (Views: 55.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-11 19:22:21 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NzdMRghqC56z0cnBKSaasqBysy+0c5zvRJ4iBj8qhV/m5iY0E0CUDrNq9ihhzynZO6IttCNe8ZPD3oQNBx35og==", "video"=>{"link"=>"https://www.youtube.com/watch?v=si2stxyxQ_k"}, "commit"=>"Create Video"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms)
+
+
+  
+NameError (uninitialized constant Video::YT):
+  
+app/models/video.rb:12:in `block in <class:Video>'
+app/controllers/videos_controller.rb:13:in `create'
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.3ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (97.7ms)
+Started POST "/videos" for ::1 at 2016-09-11 21:38:05 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NzdMRghqC56z0cnBKSaasqBysy+0c5zvRJ4iBj8qhV/m5iY0E0CUDrNq9ihhzynZO6IttCNe8ZPD3oQNBx35og==", "video"=>{"link"=>"https://www.youtube.com/watch?v=si2stxyxQ_k"}, "commit"=>"Create Video"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.4ms)
+
+
+  
+NameError (uninitialized constant Video::YT):
+  
+app/models/video.rb:21:in `rescue in block in <class:Video>'
+app/models/video.rb:11:in `block in <class:Video>'
+app/controllers/videos_controller.rb:13:in `create'
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.5ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.3ms)
+  Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (101.8ms)
