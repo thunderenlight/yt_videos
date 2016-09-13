@@ -32,7 +32,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 gem 'bootstrap-sass', '~> 3.1.1.0'
 # gem 'youtube_it'
-gem 'yt', '~> 0.25.5'
+gem 'yt', '~> 0.25.6'
 gem 'autoprefixer-rails'
 # gem 'rails-observers', '~> 0.1.3'
 group :development, :test do
