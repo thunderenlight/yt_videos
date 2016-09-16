@@ -7,9 +7,9 @@ class Video < ApplicationRecord
 	validates :link, presence: true, format: YT_LINK_FORMAT
 
 
-	def before_create(link) 
+	def before_save(link) 
 		begin
-			video = YT::Video.new url: self.link.match(YT_LINK_FORMAT)
+			video = Yt::Video.new url: link
 
 			self.uid = video.id
 			self.title = video.title
@@ -18,7 +18,7 @@ class Video < ApplicationRecord
 			self.comments = video.comment_count
 			# self.duration = parse_duration(video.duration)
 			self.published_at = video.published_at
-		rescue YT::Errors::NoItems
+		rescue Yt::Errors::NoItems
 			self.title = ''
 		end
 			# uid = link.match(YT_LINK_FORMAT)
@@ -27,6 +27,6 @@ class Video < ApplicationRecord
 			# if self.uid.to_s.length !=11
 			# 	self.errors.add(:link, 'is invalid.')
 			# 	false
-			puts video.id 
+			
 	end
 end

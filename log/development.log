@@ -3061,3 +3061,466 @@ app/controllers/video_uploads_controller.rb:14:in `create'
   Rendering /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
   Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.7ms)
   Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (100.6ms)
+Started GET "/" for ::1 at 2016-09-14 11:17:30 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[35m (6.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" ORDER BY created_at Desc LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT "videos".* FROM "videos" ORDER BY created_at Desc[0m
+  Rendered videos/index.html.erb within layouts/application (51.0ms)
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 1169ms (Views: 1106.3ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-14 11:17:42 -0500
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.8ms)
+  Rendered videos/new.html.erb within layouts/application (322.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 417ms (Views: 391.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-14 11:18:18 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KkT3kzb0SbR0admiOCGWtepzdv/eXZUNJpK0IGSJjLP7lZ3hLd7WJHTS5ktwyCXecaPoZElw+HGh0hIrXL7wTg==", "video"=>{"link"=>"https://www.youtube.com/watch?v=9cc8kKsqrwE"}, "commit"=>"Create Video"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (39.7ms)[0m  [1m[32mINSERT INTO "videos" ("link", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["link", "https://www.youtube.com/watch?v=9cc8kKsqrwE"], ["created_at", 2016-09-14 16:18:18 UTC], ["updated_at", 2016-09-14 16:18:18 UTC]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 50ms (ActiveRecord: 42.2ms)
+
+
+Started GET "/" for ::1 at 2016-09-14 11:18:18 -0500
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  [1m[36mVideo Load (0.6ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" ORDER BY created_at Desc LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT "videos".* FROM "videos" ORDER BY created_at Desc[0m
+  Rendered videos/index.html.erb within layouts/application (10.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 83ms (Views: 78.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-14 12:04:04 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (6.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.8ms)
+  Rendered videos/new.html.erb within layouts/application (107.1ms)
+  [1m[36mUser Load (15.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 1200ms (Views: 1108.8ms | ActiveRecord: 17.4ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-14 12:04:12 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/CRA7grMec8zfTasPUZsrRegXM4RE5zWwVYW4GQyenYt9SqcEebmXzPGCUV1r9/GjHDCVYY+8apGFrDrXAUGiw==", "video"=>{"link"=>"https://www.youtube.com/watch?v=dhKDztq5_sI"}, "commit"=>"Create Video"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (19.7ms)[0m  [1m[32mINSERT INTO "videos" ("link", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["link", "https://www.youtube.com/watch?v=dhKDztq5_sI"], ["created_at", 2016-09-14 17:04:13 UTC], ["updated_at", 2016-09-14 17:04:13 UTC]]
+  [1m[35m (38.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 67ms (ActiveRecord: 58.0ms)
+
+
+Started GET "/" for ::1 at 2016-09-14 12:04:13 -0500
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" ORDER BY created_at Desc LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mVideo Load (1.0ms)[0m  [1m[34mSELECT "videos".* FROM "videos" ORDER BY created_at Desc[0m
+  Rendered videos/index.html.erb within layouts/application (9.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 155ms (Views: 126.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-14 12:05:01 -0500
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (1.3ms)
+  Rendered videos/new.html.erb within layouts/application (16.7ms)
+  [1m[36mUser Load (8.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 191ms (Views: 130.0ms | ActiveRecord: 10.2ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-14 12:05:05 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iRnZ2gnxtDsEkTsTmbXml3RHYmniJ4u9Gmu+/dCdoIdYyLOoEtsrqwQqBPrRXFX875f88nUK5sGdKxj26Krceg==", "video"=>{"link"=>"https://www.youtube.com/watch?v=si2stxyxQ_k"}, "commit"=>"Create Video"}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "videos" ("link", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["link", "https://www.youtube.com/watch?v=si2stxyxQ_k"], ["created_at", 2016-09-14 17:05:05 UTC], ["updated_at", 2016-09-14 17:05:05 UTC]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/" for ::1 at 2016-09-14 12:05:05 -0500
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" ORDER BY created_at Desc LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT "videos".* FROM "videos" ORDER BY created_at Desc[0m
+  Rendered videos/index.html.erb within layouts/application (6.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 75ms (Views: 54.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-14 12:06:40 -0500
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.9ms)
+  Rendered videos/new.html.erb within layouts/application (18.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 64ms (Views: 61.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-14 12:06:44 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kPZ/Gww2MdtQ4VDQdD06VAX3fbHQd31IcEVOtCYmc8lBJxVpFxyuS1Babzk81Ik/nifjKkdaEDT3Bei/HhEPNA==", "video"=>{"link"=>"https://www.youtube.com/watch?v=dhKDztq5_sI"}, "commit"=>"Create Video"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (70.5ms)[0m  [1m[32mINSERT INTO "videos" ("link", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["link", "https://www.youtube.com/watch?v=dhKDztq5_sI"], ["created_at", 2016-09-14 17:06:44 UTC], ["updated_at", 2016-09-14 17:06:44 UTC]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 78ms (ActiveRecord: 73.3ms)
+
+
+Started GET "/" for ::1 at 2016-09-14 12:06:44 -0500
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" ORDER BY created_at Desc LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT "videos".* FROM "videos" ORDER BY created_at Desc[0m
+  Rendered videos/index.html.erb within layouts/application (7.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 86ms (Views: 81.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-14 12:10:30 -0500
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (1.5ms)
+  Rendered videos/new.html.erb within layouts/application (22.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 236ms (Views: 197.2ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-14 12:10:41 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jzfZh4frCFdAv5hYoL1hDxTAP5wLrKHdMoabrPTnwbRe5rP1nMGXx0AEp7HoVNJkjxChB5yBzKG1xj2nzNC9SQ==", "video"=>{"link"=>"https://www.youtube.com/watch?v=si2stxyxQ_k"}, "commit"=>"Create Video"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (43.6ms)[0m  [1m[32mINSERT INTO "videos" ("link", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["link", "https://www.youtube.com/watch?v=si2stxyxQ_k"], ["created_at", 2016-09-14 17:10:41 UTC], ["updated_at", 2016-09-14 17:10:41 UTC]]
+  [1m[35m (68.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 117ms (ActiveRecord: 112.6ms)
+
+
+Started GET "/" for ::1 at 2016-09-14 12:10:42 -0500
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" ORDER BY created_at Desc LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT "videos".* FROM "videos" ORDER BY created_at Desc[0m
+  Rendered videos/index.html.erb within layouts/application (6.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 58ms (Views: 49.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-14 12:21:24 -0500
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.7ms)
+  Rendered videos/new.html.erb within layouts/application (16.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 793ms (Views: 734.2ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-14 12:21:30 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BhVkVtGNNUAm4e+2Ic3hgJsG3PpGmWwXQWJsY0npbUPXxA4kyqeq0CZa0F9pJFLrANZCYdG0AWvGIspocd4Rvg==", "video"=>{"link"=>"https://www.youtube.com/watch?v=m_cZfV-IiAw"}, "commit"=>"Create Video"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (12.3ms)[0m  [1m[32mINSERT INTO "videos" ("link", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["link", "https://www.youtube.com/watch?v=m_cZfV-IiAw"], ["created_at", 2016-09-14 17:21:30 UTC], ["updated_at", 2016-09-14 17:21:30 UTC]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 20ms (ActiveRecord: 14.7ms)
+
+
+Started GET "/" for ::1 at 2016-09-14 12:21:30 -0500
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[35m (49.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  [1m[36mVideo Load (0.5ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" ORDER BY created_at Desc LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mVideo Load (0.6ms)[0m  [1m[34mSELECT "videos".* FROM "videos" ORDER BY created_at Desc[0m
+  Rendered videos/index.html.erb within layouts/application (57.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 127ms (Views: 58.4ms | ActiveRecord: 51.5ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-14 12:22:12 -0500
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.7ms)
+  Rendered videos/new.html.erb within layouts/application (15.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 206ms (Views: 163.9ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-14 12:22:16 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HbTys73eHGufAUundkNVf2yhmg5abUGPAKKnRQYYJ73MZZjBpvSD+5+6dE4+quYU93EElc1ALPOH4gFOPi9bQA==", "video"=>{"link"=>"https://www.youtube.com/watch?v=m_cZfV-IiAw"}, "commit"=>"Create Video"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (29.2ms)[0m  [1m[32mINSERT INTO "videos" ("link", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["link", "https://www.youtube.com/watch?v=m_cZfV-IiAw"], ["created_at", 2016-09-14 17:22:16 UTC], ["updated_at", 2016-09-14 17:22:16 UTC]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 38ms (ActiveRecord: 32.3ms)
+
+
+Started GET "/" for ::1 at 2016-09-14 12:22:16 -0500
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" ORDER BY created_at Desc LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT "videos".* FROM "videos" ORDER BY created_at Desc[0m
+  Rendered videos/index.html.erb within layouts/application (8.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 107ms (Views: 62.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-14 12:23:28 -0500
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (1.1ms)
+  Rendered videos/new.html.erb within layouts/application (6.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 79ms (Views: 59.4ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-14 12:23:32 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J/LVselc5wkkgbDLJD26vpwdfO7zYjPQDyp9SheXJ7T2I7/D8nZ4mSQ6jyJs1AnVB83idWRPXqyIattBL6BbSQ==", "video"=>{"link"=>"https://www.youtube.com/watch?v=si2stxyxQ_k"}, "commit"=>"Create Video"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (27.0ms)[0m  [1m[32mINSERT INTO "videos" ("link", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["link", "https://www.youtube.com/watch?v=si2stxyxQ_k"], ["created_at", 2016-09-14 17:23:32 UTC], ["updated_at", 2016-09-14 17:23:32 UTC]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 34ms (ActiveRecord: 29.4ms)
+
+
+Started GET "/" for ::1 at 2016-09-14 12:23:32 -0500
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  [1m[36mVideo Load (0.6ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" ORDER BY created_at Desc LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mVideo Load (0.5ms)[0m  [1m[34mSELECT "videos".* FROM "videos" ORDER BY created_at Desc[0m
+  Rendered videos/index.html.erb within layouts/application (10.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 60ms (Views: 56.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-14 12:24:14 -0500
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.6ms)
+  Rendered videos/new.html.erb within layouts/application (7.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 94ms (Views: 73.8ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-14 12:24:17 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X0+CaZFCEwIcgtuNmOWNhHzq4lV+jSsZcXAVdJsjAHOOnugbimiMkhw55GTQDD7v5zp8zumgRmX2MLN/oxR8jg==", "video"=>{"link"=>"https://www.youtube.com/watch?v=B6M1wIDCegU"}, "commit"=>"Create Video"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "videos" ("link", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["link", "https://www.youtube.com/watch?v=B6M1wIDCegU"], ["created_at", 2016-09-14 17:24:17 UTC], ["updated_at", 2016-09-14 17:24:17 UTC]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/" for ::1 at 2016-09-14 12:24:17 -0500
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" ORDER BY created_at Desc LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos" ORDER BY created_at Desc[0m
+  Rendered videos/index.html.erb within layouts/application (6.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 51ms (Views: 46.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-14 12:25:08 -0500
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (1.3ms)
+  Rendered videos/new.html.erb within layouts/application (16.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 207ms (Views: 164.1ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-14 12:25:12 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G3RZlBme9ZQdP0H6y+awbezHJQaD2O31mNTSSSiwLrfKpTPmArRqBB2EfhODDwMGdxe7nRT1gIkflHRCEIdSSg==", "video"=>{"link"=>"https://www.youtube.com/watch?v=m_cZfV-IiAw"}, "commit"=>"Create Video"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "videos" ("link", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["link", "https://www.youtube.com/watch?v=m_cZfV-IiAw"], ["created_at", 2016-09-14 17:25:12 UTC], ["updated_at", 2016-09-14 17:25:12 UTC]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2016-09-14 12:25:12 -0500
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  [1m[36mVideo Load (0.5ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" ORDER BY created_at Desc LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT "videos".* FROM "videos" ORDER BY created_at Desc[0m
+  Rendered videos/index.html.erb within layouts/application (8.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 67ms (Views: 48.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-14 12:26:01 -0500
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (1.4ms)
+  Rendered videos/new.html.erb within layouts/application (18.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 245ms (Views: 170.3ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-14 12:26:04 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I/6nBCm6j05HuBLVVWFxGV/Bo08Oztv/i95PMXcgVYLyL812MpAQ3kcDLTwdiMJyxBE91JnjtoMMnuk6Txcpfw==", "video"=>{"link"=>"https://www.youtube.com/watch?v=B6M1wIDCegU"}, "commit"=>"Create Video"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "videos" ("link", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["link", "https://www.youtube.com/watch?v=B6M1wIDCegU"], ["created_at", 2016-09-14 17:26:04 UTC], ["updated_at", 2016-09-14 17:26:04 UTC]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/" for ::1 at 2016-09-14 12:26:04 -0500
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" ORDER BY created_at Desc LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT "videos".* FROM "videos" ORDER BY created_at Desc[0m
+  Rendered videos/index.html.erb within layouts/application (6.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 76ms (Views: 49.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-14 12:26:22 -0500
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.7ms)
+  Rendered videos/new.html.erb within layouts/application (6.4ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 87ms (Views: 62.3ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-14 12:26:25 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7OiUrjwJd7FdDA8IQ+WmCeBiFGDPNa7v+vQrBshFBPE9Of7cJyPoIV23MOELDBVie7KK+1gYw5N9tI0N8HJ4DA==", "video"=>{"link"=>"https://www.youtube.com/watch?v=dhKDztq5_sI"}, "commit"=>"Create Video"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[32mINSERT INTO "videos" ("link", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["link", "https://www.youtube.com/watch?v=dhKDztq5_sI"], ["created_at", 2016-09-14 17:26:25 UTC], ["updated_at", 2016-09-14 17:26:25 UTC]]
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 12ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/" for ::1 at 2016-09-14 12:26:25 -0500
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" ORDER BY created_at Desc LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT "videos".* FROM "videos" ORDER BY created_at Desc[0m
+  Rendered videos/index.html.erb within layouts/application (6.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 56ms (Views: 48.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-14 12:29:26 -0500
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.6ms)
+  Rendered videos/new.html.erb within layouts/application (6.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 97ms (Views: 64.7ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-14 12:29:30 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FwVWWr8h4PUG8qmhS2h4RLzCRGCtA0fzGE+F6geZfeTG1DwopAt/ZQZJlkgDgcsvJxLa+zouKo+fDyPhP64BGQ==", "video"=>{"link"=>"https://www.youtube.com/watch?v=B6M1wIDCegU"}, "commit"=>"Create Video"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (16.3ms)[0m  [1m[32mINSERT INTO "videos" ("link", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["link", "https://www.youtube.com/watch?v=B6M1wIDCegU"], ["created_at", 2016-09-14 17:29:30 UTC], ["updated_at", 2016-09-14 17:29:30 UTC]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 23ms (ActiveRecord: 19.0ms)
+
+
+Started GET "/" for ::1 at 2016-09-14 12:29:30 -0500
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  [1m[36mVideo Load (0.5ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" ORDER BY created_at Desc LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT "videos".* FROM "videos" ORDER BY created_at Desc[0m
+  Rendered videos/index.html.erb within layouts/application (6.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 83ms (Views: 74.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-14 12:30:41 -0500
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (1.2ms)
+  Rendered videos/new.html.erb within layouts/application (19.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 301ms (Views: 251.3ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-14 12:30:45 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B8Xtmis6Q7KSppvY4O1WGergR3tGJZbZOtVEXq3P8sXWFIfoMBDcIpIdpDGoBOVycTDZ4NEI+6W9leJVlfiOOA==", "video"=>{"link"=>"https://www.youtube.com/watch?v=si2stxyxQ_k"}, "commit"=>"Create Video"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (19.6ms)[0m  [1m[32mINSERT INTO "videos" ("link", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["link", "https://www.youtube.com/watch?v=si2stxyxQ_k"], ["created_at", 2016-09-14 17:30:45 UTC], ["updated_at", 2016-09-14 17:30:45 UTC]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 27ms (ActiveRecord: 21.8ms)
+
+
+Started GET "/" for ::1 at 2016-09-14 12:30:45 -0500
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" ORDER BY created_at Desc LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT "videos".* FROM "videos" ORDER BY created_at Desc[0m
+  Rendered videos/index.html.erb within layouts/application (5.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 80ms (Views: 61.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/videos/new" for ::1 at 2016-09-14 12:31:49 -0500
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (1.1ms)
+  Rendered videos/new.html.erb within layouts/application (16.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 261ms (Views: 219.3ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/videos" for ::1 at 2016-09-14 12:31:53 -0500
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JsHVvP676aNCfU1JEo5//pqyhqnDzT+dqzPNoK+VWk/3EL/O5ZF2M0LGcqBaZ8yVAWIYMlTgUuEsc2url6Imsg==", "video"=>{"link"=>"https://www.youtube.com/watch?v=si2stxyxQ_k"}, "commit"=>"Create Video"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (13.9ms)[0m  [1m[32mINSERT INTO "videos" ("link", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["link", "https://www.youtube.com/watch?v=si2stxyxQ_k"], ["created_at", 2016-09-14 17:31:53 UTC], ["updated_at", 2016-09-14 17:31:53 UTC]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 21ms (ActiveRecord: 16.8ms)
+
+
+Started GET "/" for ::1 at 2016-09-14 12:31:53 -0500
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" ORDER BY created_at Desc LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT "videos".* FROM "videos" ORDER BY created_at Desc[0m
+  Rendered videos/index.html.erb within layouts/application (6.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 76ms (Views: 51.3ms | ActiveRecord: 1.0ms)
+
+

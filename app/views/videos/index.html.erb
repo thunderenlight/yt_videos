@@ -11,7 +11,7 @@
 <% if @videos.any? %>
 	<div class="container">
 		<h1>Latest videos</h1>
-		<p><%= @videos.first.title %></p>
+		<p><%= @videos.first.link %></p>
 			<div id="player-wrapper"></div>
 				<% @videos.in_groups_of(3) do |group| %>
 					<div class="row">
@@ -21,7 +21,7 @@
 								<div class="yt_video thumbnail">
 									<%= link_to image_tag("https://img.youtube.com/vi/#{vid.uid}/mqdefault.jpg", alt: vid.title, class: 'img-rounded'), "https://www.youtube.com/watch?v=#{vid.uid}", target: '_blank'  %>
 									<div class="caption">
-										<h5><%= vid.title %></h5>
+										<h5><%= vid.link %></h5>
                   										<p>
 											<span class="glyphicon glyphicon glyphicon-thumbs-up"></span><%= vid.likes  %>
 											<span class="glyphicon glyphicon glyphicon-thumbs-down"></span><%= vid.dislikes  %>
